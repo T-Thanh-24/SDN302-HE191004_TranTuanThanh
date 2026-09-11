@@ -1,0 +1,6 @@
+{
+    "name": "todo-list-es6",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "app.js"
+}
