@@ -1,0 +1,13 @@
+{
+  "name": "exercise-8-9-express",
+  "version": "1.0.0",
+  "description": "FPT Exercise 8 - Handling Errors and Exercise 9 - Custom Middleware",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

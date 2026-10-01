@@ -57,6 +57,13 @@
       "author": "Le Thi H",
       "content": "REST API is an important topic for backend development.",
       "date": "2026-09-06"
+    },
+    {
+      "id": 6,
+      "articleId": 1,
+      "author": "Pham Thi D",
+      "content": "This is a useful introduction to Node.js.",
+      "date": "2026-09-05"
     }
   ]
 }
