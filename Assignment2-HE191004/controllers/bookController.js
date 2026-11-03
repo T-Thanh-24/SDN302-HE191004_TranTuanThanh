@@ -16,13 +16,18 @@ exports.getBookById = async (req, res) => {
 exports.createBook = async (req, res) => {
   try {
     const required = ['title', 'author', 'isbn', 'category', 'totalCopies'];
+
     const missing = required.filter(k => req.body[k] === undefined || req.body[k] === '');
+
     if (missing.length) return sendError(res, 400, `Missing required fields: ${missing.join(', ')}`);
+
     if (req.body.totalCopies < 0 || (req.body.availableCopies !== undefined && req.body.availableCopies < 0))
       return sendError(res, 400, 'Book copies cannot be negative');
     const payload = { ...req.body };
+
     if (payload.availableCopies === undefined) payload.availableCopies = payload.totalCopies;
     const book = await Book.create(payload);
+    
     res.status(201).json({ success: true, message: 'Book created successfully', data: book });
   } catch (e) { handleMongooseError(e, res); }
 };
